@@ -228,7 +228,7 @@ public class DataBase2
 		
 		 /**
 		 	Sets the String called message to a given String.
-		 	@param the String wich message is to be set to
+		 	@param the String which message is to be set to
 		 */
 		public void set_message(String r)
 		{

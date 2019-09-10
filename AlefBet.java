@@ -91,22 +91,22 @@ public void set_numbers()
     values[8].set_name("eight");
 	 values[9].set_name("nine"); 
 	 values[10].set_name("ten");
-	 values[11].set_name("twinty");
+	 values[11].set_name("twenty");
     values[12].set_name("thirty");
-	 values[13].set_name("fourty");
+	 values[13].set_name("forty");
 	 values[14].set_name("fifty");
 	 values[15].set_name("sixty");
     values[16].set_name("seventy");
 	 values[17].set_name("eighty");
-    values[18].set_name("ninty");
-	 values[19].set_name("onehundred");
-	 values[20].set_name("twohundred");
-	 values[21].set_name("threehundred");
-    values[22].set_name("fourhundred");
-	 values[23].set_name("fivehundred");
-	 values[24].set_name("sixhundred");
-	 values[25].set_name("sevenhundred");
-	 values[26].set_name("eighthundred");
-    values[27].set_name("ninehundred");
+    values[18].set_name("ninety");
+	 values[19].set_name("oneHundred");
+	 values[20].set_name("twoHundred");
+	 values[21].set_name("threeHundred");
+    values[22].set_name("fourHundred");
+	 values[23].set_name("fiveHundred");
+	 values[24].set_name("sixHundred");
+	 values[25].set_name("sevenHundred");
+	 values[26].set_name("eightHundred");
+    values[27].set_name("nineHundred");
    }
 }

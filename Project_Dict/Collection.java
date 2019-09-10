@@ -6,12 +6,12 @@ public class Collection implements Image
 	private static final double PI = 3.14159;
 	
 	/*constructer with specified measers of the cube*/
-	public Collection(Image aimage)
+	public Collection(Image aImage)
 	{
 		
-		if(aimage instanceof Cube)
+		if(aImage instanceOf Cube)
 		{
-			Cube c = (Cube)aimage;
+			Cube c = (Cube)aImage;
 	      images[0] = c;
 	      a = c.a;
 	      t = c.t;
@@ -19,9 +19,9 @@ public class Collection implements Image
 			y = c.top;
 			z = c.front;
 		}
-		if(aimage instanceof Car3d)
+		if(aImage instanceOf Car3d)
 		{
-			Car3d c = (Car3d)aimage;
+			Car3d c = (Car3d)aImage;
 	      images[0] = c;
 	      a = c.a;
 	      t = c.t;
@@ -29,9 +29,9 @@ public class Collection implements Image
 			y = c.top;
 			z = c.front;
 		}
-		if(aimage instanceof Cylinder)
+		if(aImage instanceOf Cylinder)
 		{
-			Cylinder c = (Cylinder)aimage;
+			Cylinder c = (Cylinder)aImage;
 	      images[0] = c;
 	      a = c.a;
 	      t = c.t;
@@ -39,9 +39,9 @@ public class Collection implements Image
 			y = c.top;
 			z = c.front;
 		}
-		if(aimage instanceof Prisem)
+		if(aImage instanceOf prism)
 		{
-			Prisem c = (Prisem)aimage;
+			prism c = (prism)aImage;
 	      images[0] = c;
 	      a = c.a;
 	      t = c.t;
@@ -49,9 +49,9 @@ public class Collection implements Image
 			y = c.top;
 			z = c.front;
 		}
-		if(aimage instanceof Rectangle2D)
+		if(aImage instanceOf Rectangle2D)
 		{
-			Rectangle2D c = (Rectangle2D)aimage;
+			Rectangle2D c = (Rectangle2D)aImage;
 	      images[0] = (Image)c;
 		}
 		index = 1;
@@ -61,7 +61,7 @@ public class Collection implements Image
 	{
 		double L;
 		double H;
-	   if(next_image instanceof Cube)
+	   if(next_image instanceOf Cube)
 		{
 			Cube c = (Cube)next_image;
 	      c.a = a;
@@ -70,7 +70,7 @@ public class Collection implements Image
 		   c.top = (transform(300,0, c.left, c.top, c.front, 1));
 			images[index] = c;
 		}
-		if(next_image instanceof Car3d)
+		if(next_image instanceOf Car3d)
 		{
 			Car3d c = (Car3d)next_image;
 	      c.a = a;
@@ -79,7 +79,7 @@ public class Collection implements Image
 		   c.top = (transform(300,0, c.left, c.top, c.front, 1));
 			images[index] = c;
 		}
-		if(next_image instanceof Cylinder)
+		if(next_image instanceOf Cylinder)
 		{
 			Cylinder c = (Cylinder)next_image;
 	      c.a = a;
@@ -88,16 +88,16 @@ public class Collection implements Image
 		   c.top = (transform(300,0, c.left, c.top, c.front, 1));
 			images[index] = c;
 		}
-		if(next_image instanceof Prisem)
+		if(next_image instanceOf prism)
 		{
-			Prisem c = (Prisem)next_image;
+			prism c = (prism)next_image;
 	      c.a = a;
 		   c.t = t;
 			c.left = (transform(300,0, c.left, c.top, c.front, 0));
 		   c.top = (transform(300,0, c.left, c.top, c.front ,1));
 			images[index] = c;
 		}
-		if(next_image instanceof Rectangle2D)
+		if(next_image instanceOf Rectangle2D)
 		{
 			Rectangle2D c = (Rectangle2D)next_image;
 			images[index] = (Image)c;
@@ -109,27 +109,27 @@ public class Collection implements Image
 	{
 		for(int i = 0; i < index; i++)
 		{
-			if(images[i] instanceof Cube)
+			if(images[i] instanceOf Cube)
 			{
 				Cube c = (Cube)images[i];
 				c.draw_transparent(images[i],gg,q);
 			}
-			if(images[i] instanceof Car3d)
+			if(images[i] instanceOf Car3d)
 			{
 				Car3d c = (Car3d)images[i];
 				c.draw(images[i],gg,q);
 			}
-			if(images[i] instanceof Cylinder)
+			if(images[i] instanceOf Cylinder)
 			{
 				Cylinder c = (Cylinder)images[i];
 				c.draw(images[i],gg,q);
 			}
-			if(images[i] instanceof Prisem)
+			if(images[i] instanceOf prism)
 			{
-				Prisem c = (Prisem)images[i];
+				prism c = (prism)images[i];
 				c.draw(images[i],gg,q);
 			}
-			if(images[i] instanceof Rectangle2D)
+			if(images[i] instanceOf Rectangle2D)
 			{
 				gg.draw((Rectangle2D.Double)images[i]);
 			}

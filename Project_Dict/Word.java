@@ -21,7 +21,7 @@ public class Word implements Comparable
 	/**
 		Compares the Word object with another given Word object lexicographically
 		@param the other Word object to be compared to Word object
-		@return negetive one if Word comes befor the other Word zero if they are the same and one if otherwise
+		@return negative one if Word comes before the other Word zero if they are the same and one if otherwise
 	*/
 	public int compareTo(Object OtherWord)
 	{

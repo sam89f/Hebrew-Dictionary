@@ -14,8 +14,8 @@ import java.io.Console.*;
 import java.math.*;
 
 /**
-	W_Path stores wich letters were removed from a string by creating
-	an object with field representing the letters wich may potentialy
+	W_Path stores which letters were removed from a string by creating
+	an object with field representing the letters which may potentialy
 	be removed from the string durring it's life time.
 */
 public class W_Path
@@ -179,7 +179,7 @@ public class W_Path
 	}
 	/**
 		Sets the value of word to wd;.
-		@param wd value wich  the variable word will be set to
+		@param wd value which  the variable word will be set to
 	*/
 	public void set_word(String wd)
 	{
@@ -187,7 +187,7 @@ public class W_Path
 	}
 	/**
 		Sets the value of a to bi;.
-		@param bi value wich  variable a will be set to
+		@param bi value which  variable a will be set to
 	*/
 	public void set_a(boolean bi)
 	{
@@ -195,7 +195,7 @@ public class W_Path
 	}
 	/**
 		Sets the value of b to bi;.
-		@param bi value wich  variable b will be set to
+		@param bi value which  variable b will be set to
 	*/
 	public void set_b(boolean bi)
 	{
@@ -203,7 +203,7 @@ public class W_Path
 	}
 	/**
 		Sets the value of d to bi;.
-		@param bi value wich  variable d will be set to
+		@param bi value which  variable d will be set to
 	*/
 	public void set_d(boolean bi)
 	{
@@ -211,7 +211,7 @@ public class W_Path
 	}
 	/**
 		Sets the value of h to bi;.
-		@param bi value wich  variable h will be set to
+		@param bi value which  variable h will be set to
 	*/
 	public void set_h(boolean bi)
 	{
@@ -219,7 +219,7 @@ public class W_Path
 	}
 	/**
 		Sets the value of v to bi;.
-		@param bi value wich  variable v will be set to
+		@param bi value which  variable v will be set to
 */
 	public void set_v(boolean bi)
 	{
@@ -227,7 +227,7 @@ public class W_Path
 	}
 	/**
 		Sets the value of i to bi;.
-		@param bi value wich  variable i will be set to
+		@param bi value which  variable i will be set to
 	*/
 	public void set_i(boolean bi)
 	{
@@ -235,7 +235,7 @@ public class W_Path
 	}
 	/**
 		Sets the value of c to bi;.
-		@param bi value wich  variable c will be set to
+		@param bi value which  variable c will be set to
 	*/
 	public void set_c(boolean bi)
 	{
@@ -243,7 +243,7 @@ public class W_Path
 	}
 	/**
 		Sets the value of l to bi;.
-		@param bi value wich  variable l will be set to
+		@param bi value which  variable l will be set to
 	*/
 	public void set_l(boolean bi)
 	{
@@ -251,7 +251,7 @@ public class W_Path
 	}
 	/**
 	Sets the value of m to bi;.
-	@param bi value wich  variable m will be set to
+	@param bi value which  variable m will be set to
 	*/
 	public void set_m(boolean bi)
 	{
@@ -259,7 +259,7 @@ public class W_Path
 	}
 	/**
 		Sets the value of n to bi;.
-		@param bi value wich  variable n will be set to
+		@param bi value which  variable n will be set to
 	*/
 	public void set_n(boolean bi)
 	{
@@ -267,7 +267,7 @@ public class W_Path
 	}
 	/**
 		Sets the value of s to bi;.
-		@param bi value wich  variable s will be set to
+		@param bi value which  variable s will be set to
 	*/
 	public void set_s(boolean bi)
 	{
@@ -275,7 +275,7 @@ public class W_Path
 	}
 	/**
 		Sets the value of t to bi;.
-		@param bi value wich  variable t will be set to
+		@param bi value which  variable t will be set to
 	*/
 	public void set_t(boolean bi)
 	{

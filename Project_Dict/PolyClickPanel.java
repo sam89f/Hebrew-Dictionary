@@ -340,10 +340,10 @@ public class PolyClickPanel extends PolyPanel
 	public static void main(String args[])
 	throws java.io.IOException
 	{
-	   JPanel panals = new PolyClickPanel(20, 20);
+	   JPanel panels = new PolyClickPanel(20, 20);
 		JFrame frame = new JFrame();
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setContentPane(panals);
+		frame.setContentPane(panels);
 		frame.pack();
 		frame.show();
 	}

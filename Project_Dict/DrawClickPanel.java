@@ -29,7 +29,7 @@ public class DrawClickPanel extends DrawPanel
 				for(int i = 0; i < 3; i++)
 				{
 					set_size(getWidth(),getHeight());
-               repaint();		
+               		repaint();
 				}
 			}
 			public void mouseReleased(MouseEvent event)
@@ -38,7 +38,7 @@ public class DrawClickPanel extends DrawPanel
 				for(int i = 0; i < 3; i++)
 				{
 					set_size(getWidth(),getHeight());
-               repaint();		
+               		repaint();
 				}
 			}
 			public void mouseClicked(MouseEvent event)

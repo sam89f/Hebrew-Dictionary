@@ -34,23 +34,23 @@ public class Dictionary
 	private double [] Hits;
 	private JFrame frame;
 	private String[] ABet;
-	private static final Wight W = new Wight();
+	private static final Weight W = new Weight();
 	private JLabel in_label;
-	private M_tryangle Try = new M_tryangle();
-	private PolyClickPanel bpanal;
-	private PolyClickPanel keypanel;
-	private JFrame sframe;
-	private JFrame bframe;
-	private JFrame keyframe;
+	private M_triangle Try = new M_triangle();
+	private PolyClickPanel bPanel;
+	private PolyClickPanel keyPanel;
+	private JFrame sFrame;
+	private JFrame bFrame;
+	private JFrame keyFrame;
 	private JTextField textField;
 	private JFrame inpt_frame;
-	private JLabel blabel;                    
+	private JLabel bLabel;
 	private JScrollPane scrollBar;
-	private JLabel slabel;
-	private JLabel alabel;
+	private JLabel sLabel;
+	private JLabel aLabel;
 	private JTextArea textArea;
    	private AlefBet Alef;
-	private PolyClickPanel panal;
+	private PolyClickPanel panel;
 	protected static Vector<Word> data_map = new Vector<Word>();
    	public Dictionary()
 	throws java.io.IOException
@@ -98,24 +98,24 @@ public class Dictionary
 		 ABet [26] = "ף";
 		 ABet[27] = "ץ";
 		 
-		 keypanel = new PolyClickPanel();
-		 keypanel.setLayout(new GridLayout(4, 10));
-		 panal = new PolyClickPanel();
-		 keypanel.setFont(new Font("Cardo", Font.PLAIN, 17));
+		 keyPanel = new PolyClickPanel();
+		 keyPanel.setLayout(new GridLayout(4, 10));
+		 panel = new PolyClickPanel();
+		 keyPanel.setFont(new Font("Cardo", Font.PLAIN, 17));
 		 textField = new JTextField(12);
 		 textField.setFont(new Font("Serif", Font.BOLD, 18));
-		 keyframe = new JFrame();
-		 keyframe.setTitle( "Hebrew Dictionary Keypad");
+		 keyFrame = new JFrame();
+		 keyFrame.setTitle( "Hebrew Dictionary Keypad");
 		 inpt_frame = new JFrame();
-	    	 inpt_frame.setTitle( "Enter Word");
-		 panal.add(textField);
+		 inpt_frame.setTitle( "Enter Word");
+		 panel.add(textField);
 		 in_label = new JLabel("Enter Word");
 		 inpt_frame.add(in_label);
-		 inpt_frame.setContentPane(panal);
-		 bpanal = new PolyClickPanel();
-		 bframe = new JFrame();
-		 bframe.setTitle( "Hebrew Dictionary Menu");
-		 sframe = new JFrame();
+		 inpt_frame.setContentPane(panel);
+		 bPanel = new PolyClickPanel();
+		 bFrame = new JFrame();
+		 bFrame.setTitle( "Hebrew Dictionary Menu");
+		 sFrame = new JFrame();
 		 frame = new JFrame();
 		 textArea = new JTextArea(15,75);
 		 textArea.setFont(new Font("Cardo", Font.PLAIN, 17));
@@ -125,55 +125,55 @@ public class Dictionary
 		 scrollBar = new JScrollPane(textArea);
 		 
 		 JLabel klabel = new JLabel("Key Board");
-		 keypanel.add(keyboardButton("ק", "ק"));
-		 keypanel.add(keyboardButton("ש", "ש"));
-		 keypanel.add(keyboardButton("ר", "ר"));
-		 keypanel.add(keyboardButton("ט", "ט"));
-		 keypanel.add(keyboardButton("י", "י"));
-		 keypanel.add(keyboardButton("ע", "ע"));
-		 keypanel.add(keyboardButton("ם", "ם"));
-		 keypanel.add(keyboardButton("פ", "פ"));
-		 keypanel.add(keyboardButton("ים", "ים"));
-		 keypanel.add(keyboardButton("צ", "צ"));
+		 keyPanel.add(keyboardButton("ק", "ק"));
+		 keyPanel.add(keyboardButton("ש", "ש"));
+		 keyPanel.add(keyboardButton("ר", "ר"));
+		 keyPanel.add(keyboardButton("ט", "ט"));
+		 keyPanel.add(keyboardButton("י", "י"));
+		 keyPanel.add(keyboardButton("ע", "ע"));
+		 keyPanel.add(keyboardButton("ם", "ם"));
+		 keyPanel.add(keyboardButton("פ", "פ"));
+		 keyPanel.add(keyboardButton("ים", "ים"));
+		 keyPanel.add(keyboardButton("צ", "צ"));
 		  
 		 
-		 keypanel.add(keyboardButton("א", "א"));
-		 keypanel.add(keyboardButton("ס", "ס"));
-		 keypanel.add(keyboardButton("ד", "ד"));
-		 keypanel.add(keyboardButton("ג", "ג"));
-		 keypanel.add(keyboardButton("ה", "ה"));
-		 keypanel.add(keyboardButton("ת", "ת"));
-		 keypanel.add(keyboardButton("ל", "ל"));
-		 keypanel.add(keyboardButton("ך", "ך"));
-		 keypanel.add(keyboardButton("ף", "ף"));
-		 keypanel.add(keyboardButton("\"", "\""));
+		 keyPanel.add(keyboardButton("א", "א"));
+		 keyPanel.add(keyboardButton("ס", "ס"));
+		 keyPanel.add(keyboardButton("ד", "ד"));
+		 keyPanel.add(keyboardButton("ג", "ג"));
+		 keyPanel.add(keyboardButton("ה", "ה"));
+		 keyPanel.add(keyboardButton("ת", "ת"));
+		 keyPanel.add(keyboardButton("ל", "ל"));
+		 keyPanel.add(keyboardButton("ך", "ך"));
+		 keyPanel.add(keyboardButton("ף", "ף"));
+		 keyPanel.add(keyboardButton("\"", "\""));
 		
 		  
-		 keypanel.add(keyboardButton("ז", "ז"));
-		 keypanel.add(keyboardButton("ח", "ח"));
-		 keypanel.add(keyboardButton("כ", "כ"));
-		 keypanel.add(keyboardButton("ו", "ו"));
-		 keypanel.add(keyboardButton("ב", "ב"));
-		 keypanel.add(keyboardButton("נ", "נ"));
-		 keypanel.add(keyboardButton("מ", "מ"));
-		 keypanel.add(keyboardButton("ן", "ן"));
-		 keypanel.add(keyboardButton("ות", "ות"));
-		 keypanel.add(keyboardButton("ץ", "ץ"));
+		 keyPanel.add(keyboardButton("ז", "ז"));
+		 keyPanel.add(keyboardButton("ח", "ח"));
+		 keyPanel.add(keyboardButton("כ", "כ"));
+		 keyPanel.add(keyboardButton("ו", "ו"));
+		 keyPanel.add(keyboardButton("ב", "ב"));
+		 keyPanel.add(keyboardButton("נ", "נ"));
+		 keyPanel.add(keyboardButton("מ", "מ"));
+		 keyPanel.add(keyboardButton("ן", "ן"));
+		 keyPanel.add(keyboardButton("ות", "ות"));
+		 keyPanel.add(keyboardButton("ץ", "ץ"));
 		  
-		  keypanel.add(keyboardButton("BkSp", "0BkSp"));
-		  keypanel.add(keyboardButton("BkWd", "0BkWd"));
-		  keypanel.add(keyboardButton("Clear", "0clear"));
-		  keypanel.add(keyboardButton( "RevWd", "0rev"));
-		  keypanel.add(keyboardButton( "^", "0U"));
-		  keypanel.add(keyboardButton("RevChr", "0RevChr"));
-		  keypanel.add(keyboardButton("Space", " "));
-		  keypanel.add(keyboardButton("-- ...", "0--"));
-		  keypanel.add(keyboardButton("-", "-"));
-		  keypanel.add(keyboardButton("\'", "\'"));
+		  keyPanel.add(keyboardButton("BkSp", "0BkSp"));
+		  keyPanel.add(keyboardButton("BkWd", "0BkWd"));
+		  keyPanel.add(keyboardButton("Clear", "0clear"));
+		  keyPanel.add(keyboardButton( "RevWd", "0rev"));
+		  keyPanel.add(keyboardButton( "^", "0U"));
+		  keyPanel.add(keyboardButton("RevChr", "0RevChr"));
+		  keyPanel.add(keyboardButton("Space", " "));
+		  keyPanel.add(keyboardButton("-- ...", "0--"));
+		  keyPanel.add(keyboardButton("-", "-"));
+		  keyPanel.add(keyboardButton("\'", "\'"));
 		  
-		 keyframe.setContentPane(keypanel);
-		 keyframe.pack();
-		 keyframe.show();
+		 keyFrame.setContentPane(keyPanel);
+		 keyFrame.pack();
+		 keyFrame.show();
 		test = new DataBase2();
 		get_book();
    	}
@@ -303,7 +303,7 @@ public class Dictionary
 		   	   	   	   String input_def = "";
 		   	   	   	   while(input_def.equals(""))
 		   	   	   	   {
-							input_def = JOptionPane.showInputDialog("Enter defenetion of word.:");
+							input_def = JOptionPane.showInputDialog("Enter definition of word.:");
 							if(input_def == null)
 							{
 									return;
@@ -338,7 +338,7 @@ public class Dictionary
 		   	   	   }
 		   	   	   catch(IOException e)
 		   	   	   {
-		   	   	   	   System.out.println("Error accurred while trying to edit word.");
+		   	   	   	   System.out.println("Error occurred while trying to edit word.");
 		   	   	   }
 		   	   }
 		   };
@@ -353,9 +353,9 @@ public class Dictionary
 					inpt_frame.dispose();
 					inpt_frame = new JFrame();
 					inpt_frame.add(in_label);
-					panal = new PolyClickPanel();
-					panal.add(textField);
-					inpt_frame.setContentPane(panal);
+					panel = new PolyClickPanel();
+					panel.add(textField);
+					inpt_frame.setContentPane(panel);
 					inpt_frame.add(in_label);
 				}
 		   };
@@ -391,7 +391,7 @@ public class Dictionary
 				}
 				catch(IOException e)
 				{
-					System.out.println("Error accurred while trying to delete word.");
+					System.out.println("Error occurred while trying to delete word.");
 				}
 			}
 		};
@@ -423,7 +423,7 @@ public class Dictionary
 				
 				while(input_def.equals(""))
 				{	
-					input_def = JOptionPane.showInputDialog("Enter defenetion of word.:");
+					input_def = JOptionPane.showInputDialog("Enter definition of word.:");
 					if(input_def == null)
 					{
 						return;
@@ -452,7 +452,7 @@ public class Dictionary
 				} 
 				catch(IOException e)
 				{
-				System.out.println("Error accurred while trying to add new word.");
+				System.out.println("Error occurred while trying to add new word.");
 			     }
 		     }
 	     };
@@ -466,9 +466,9 @@ public class Dictionary
 	         {
 	             inpt_frame.dispose();
 	             inpt_frame = new JFrame();
-	             panal = new PolyClickPanel();
-	             panal.add(textField);
-                               inpt_frame.setContentPane(panal);
+	             panel = new PolyClickPanel();
+	             panel.add(textField);
+                               inpt_frame.setContentPane(panel);
 	             inpt_frame.add(in_label);
 	         }
 	      };
@@ -497,7 +497,7 @@ public class Dictionary
 	}
 	
 	/**
-		Removes any character not useful to the program witch may be with in a word.
+		Removes any character not useful to the program which may be with in a word.
 		@param the word to be checked for un-useful characters
 		@return the word without the un-useful characters
 	*/
@@ -530,7 +530,7 @@ public class Dictionary
 	/**
 		Check to see if a String is a number in Hebrew
 		@param the String to be determined to be a number or not
-		@return negetive one if it is not a number, and the prefix of the number if it is a number
+		@return negative one if it is not a number, and the prefix of the number if it is a number
 	*/
 	public int IsNumber(String num)
 	{
@@ -652,13 +652,13 @@ public class Dictionary
 		while ((tokens.hasMoreTokens())&&(k<500))
 		{
 			String token = tokens.nextToken(); //gets the next token
-			temps[k] = token; //sores the token in the kth (actualy the k+1th) index of the temps array
-			k++; //keeps track of successive array indexies, and size of the array which is equal to the total number of tokens (produced from this loop)  
+			temps[k] = token; //sores the token in the kth (actually the k+1th) index of the temps array
+			k++; //keeps track of successive array indexes, and size of the array which is equal to the total number of tokens (produced from this loop)
 		}
 		
 		if((k < 2)&&(q))
 		{
-			return;	//if number ot tokes is less then two and q is true (end >= old_end) then function is of no use and thus termenates
+			return;	//if number ot tokes is less then two and q is true (end >= old_end) then function is of no use and thus terminates
 		}
 		textArea.append( "\n"); //formats textArea
 		String temp2;
@@ -674,7 +674,7 @@ public class Dictionary
 					int e = link.length();
 					boolean c = false;
 					int Tm = 0;
-					if((e>1)&&(temps[i+j].length()> 0)) //gards against potential buffer over flows
+					if((e>1)&&(temps[i+j].length()> 0)) //gaurds against potential buffer over flows
 					{
 						if((link + "-" + temps[i+j]).length() < input.length())
 						{
@@ -819,7 +819,7 @@ public class Dictionary
 					
 					if(c == false) //if there is no match
 					{
-						link = link + "-" + temps[i+j]; //add current temps intex (i + j) to link, to check for larger phrases
+						link = link + "-" + temps[i+j]; //add current temps index (i + j) to link, to check for larger phrases
 					}
 					else  //if there is a match,
 					{
@@ -1290,8 +1290,8 @@ public class Dictionary
 				while ((tokens.hasMoreTokens())&&(k<500))
 				{
 					temps[k] = PointHandler(tokens.nextToken());
-					copy[k] = temps[k]; //stores the token in the kth (actualy the k+1th) index of the temps array
-					k++; //keeps track of successive array indexies, and size of the array which is equal to the total number of tokens (produced from this loop)
+					copy[k] = temps[k]; //stores the token in the kth (actually the k+1th) index of the temps array
+					k++; //keeps track of successive array indexes, and size of the array which is equal to the total number of tokens (produced from this loop)
 				}
 				String temp2;
 				if(k > 1)  //if multible tokens, then proceed
@@ -1314,7 +1314,7 @@ public class Dictionary
 							
 							int Tm = 0;
 							int Tfm = 0;
-							if(((ce>1)&&(tps.length()> 0))) //gards against potential buffer over flows
+							if(((ce>1)&&(tps.length()> 0))) //gaurds against potential buffer over flows
 							{
 								//if lk plus the next token produces a phrase found in the Vecter, then combine lk and tps (the next token) in to one token lk
 								if(checkW(lk + "-" + tps)==1)
@@ -1460,7 +1460,7 @@ public class Dictionary
 							//*   *   *
 							//*   *   *
 							//if link plus the next token produces a phrase found in the Vecter, then combine link and temps[i +j] (the next token) into one token link
-							if((e>1)&&(temps[i+j].length()> 0)&&(fc == false)) //gards against potential buffer over flows
+							if((e>1)&&(temps[i+j].length()> 0)&&(fc == false)) //gaurds against potential buffer over flows
 							{
 								if(checkW(link + "-" + temps[i+j]) == 1) //checks to see if phrase is found
 								{
@@ -1619,7 +1619,7 @@ public class Dictionary
 									}
 									fc = true;
 									k = k - (j - fm); //thus the array is reduced by j
-									j = fm; //and thus the refference is brought down to one, because of of the subtraction from temps
+									j = fm; //and thus the reference is brought down to one, because of of the subtraction from temps
 								}
 							
 								link = lk;
@@ -1634,7 +1634,7 @@ public class Dictionary
 							{
 								if(c == false) //if there is no match
 								{
-									link = link + "-" + temps[i+j]; //add current temps intex (i + j) to link, to check for larger phrases
+									link = link + "-" + temps[i+j]; //add current temps index (i + j) to link, to check for larger phrases
 								}
 								else  //if there is a match,
 								{
@@ -1874,7 +1874,7 @@ public class Dictionary
 	    	};
 	    	ActionListener findlistener = new FdButtonListener();
 	    	findButton.addActionListener(findlistener);
-	 
+
 	    	JButton closeButton =new JButton("Close");
 	    	class CloseButtonListener implements ActionListener
 	    	{
@@ -1883,9 +1883,9 @@ public class Dictionary
 	    			inpt_frame.dispose();
 	    			inpt_frame = new JFrame();
 	    			inpt_frame.setTitle( "Enter Word");
-	    			panal = new PolyClickPanel();
-	    			panal.add(textField);
-	    			inpt_frame.setContentPane(panal);
+	    			panel = new PolyClickPanel();
+	    			panel.add(textField);
+	    			inpt_frame.setContentPane(panel);
 	    			inpt_frame.add(in_label);
 	    		}
 	    	};
@@ -2049,7 +2049,7 @@ public class Dictionary
 	    			}
 	    			catch(IOException e)
 	    			{
-	    				System.out.println("Error accurred while trying to find word.");
+	    				System.out.println("Error occurred while trying to find word.");
 	    			}
 	    		}
 	    	};
@@ -7564,7 +7564,7 @@ public class Dictionary
 				 }
 				 catch(IOException e)
 				 {
-					 System.out.println("Error accurred while trying to retieve word.");
+					 System.out.println("Error occurred while trying to retrieve word.");
 				 }
 			 }
 		 };
@@ -7581,7 +7581,7 @@ public class Dictionary
 				 }
 				 catch(IOException e)
 				 {
-					 System.out.println("Error accurred while trying to retieve word.");
+					 System.out.println("Error occurred while trying to retrieve word.");
 				 }
 			 }
 		 };
@@ -7599,7 +7599,7 @@ public class Dictionary
 				 }
 				 catch(IOException e)
 				 {
-					 System.out.println("Error accurred while trying to add new word.");
+					 System.out.println("Error occurred while trying to add new word.");
 				 }
 			 }
 		 };
@@ -7616,7 +7616,7 @@ public class Dictionary
 				 }
 				 catch(IOException e)
 				 {
-					 System.out.println("Error accurred while trying to change word.");
+					 System.out.println("Error occurred while trying to change word.");
 				 }
 			 }
 		 };
@@ -7633,7 +7633,7 @@ public class Dictionary
 				 }
 				 catch(IOException e)
 				 {
-					 System.out.println("Error accurred while trying to remove word.");
+					 System.out.println("Error occurred while trying to remove word.");
 				 }
 			 }
 		 };
@@ -7652,18 +7652,18 @@ public class Dictionary
 		 closeButton .addActionListener(clistener);
 	 
 	 
-		 blabel = new JLabel("Dictionary");
-		 bpanal.add(addwButton);
-		 bpanal.add(blabel);
-		 bpanal.add(editwButton);
-		 bpanal.add(deletewButton);
-		 bpanal.add(searchButton);
-		 bpanal.add(kabbalahButton);
-		 bpanal.add(closeButton);
+		 bLabel = new JLabel("Dictionary");
+		 bPanel.add(addwButton);
+		 bPanel.add(bLabel);
+		 bPanel.add(editwButton);
+		 bPanel.add(deletewButton);
+		 bPanel.add(searchButton);
+		 bPanel.add(kabbalahButton);
+		 bPanel.add(closeButton);
 	 
-		 bframe.setContentPane(bpanal);
-		 bframe.pack();
-		 bframe.show();
+		 bFrame.setContentPane(bPanel);
+		 bFrame.pack();
+		 bFrame.show();
 	 }
 	 public JButton keyboardButton(String label, final String key)
 	 {
